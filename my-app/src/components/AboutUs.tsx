@@ -7,7 +7,7 @@ import percent from '../assets/images/85.png'
 import percent67 from '../assets/images/67.png'
 export const AboutUs = () => {
     return (
-        <section className="relative bg-[#F6F2ED] mt-13">
+        <section className="relative bg-[#F6F2ED] mt-13 pb-55">
             <img src={wave} alt="волна" className='absolute top-[-0.2%] rotate-180 object-contain w-[1550px] '/>
             <img src={shape} alt="фигура" className='absolute top-[18%] object-contain w-[433px] right-[0%]'/>
             <img src={bone} alt="кость" className='absolute top-[25%] object-contain right-[35%] w-[116px]'/>
@@ -65,6 +65,7 @@ export const AboutUs = () => {
                     </div>
                 </div>
             </main>
+            <img src={wave} alt="волна" className='absolute bottom-[-0.3%] object-contain w-[1550px] '/>
         </section>
     )
     
