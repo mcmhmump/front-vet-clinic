@@ -4,6 +4,7 @@ import { Banner } from './components/Banner';
 import { AboutUs } from './components/AboutUs';
 import { Comand } from './components/Comand';
 import { Patients } from './components/Patients';
+import { Services } from './components/Services';
 import React from 'react';
 import './App.css'
 function App(){
@@ -13,6 +14,7 @@ function App(){
       <AboutUs />
       <Comand />
       <Patients />
+      <Services />
     </>
     
   );
