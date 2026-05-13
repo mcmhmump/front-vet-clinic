@@ -56,7 +56,7 @@ export const AboutUs = () => {
                             <div className='w-[287px] h-[75px] bg-[#F9E9E0] rounded-[20px] ml-2.5 mt-5'>
                                 <div className='flex flex-inline gap-8'>
                                     <img src={percent67} alt="95%" className='ml-6 mt-2'/>
-                                    <div className='w-[140px] h-[36px] bg-[#F8721F] rounded-[50px] mt-5'>
+                                    <div className=' w-[140px] h-[36px] bg-[#F8721F] rounded-[50px] mt-5'>
                                         <p className='text-[16px] text-[#FFFFFF] font-sans p-1 text-center font-normal'>Реккомeндуют</p>
                                     </div>
                                 </div>
