@@ -5,7 +5,7 @@ import men from "../assets/images/Artem.png"
 import rabbit from "../assets/images/rabbit.png"
 export const Comments = () =>{
     return(
-        <section className="relative pt-30 pb-90">
+        <section className="relative pt-30 pb-70">
             <img src={prize} alt="кубок" className="absolute w-[81px] h-[92px] top-50 left-30"/>
             <img src={lapka} alt="лапка" className="absolute w-[66px] h-[70px] top-50 right-30"/>
             <div className="flex flex-col items-center gap-5">
