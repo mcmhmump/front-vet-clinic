@@ -1,6 +1,8 @@
 import { Footer } from "../components/Footer";
 import { PatientHeader } from "../components/PatientHeader";
+import { useNavigate } from "react-router-dom";
 export const PatientPage = () => {
+  const navigate = useNavigate();
   return (
     <section className="min-h-screen bg-[#F6F2ED]">
       {/* Верхняя часть */}
@@ -13,9 +15,12 @@ export const PatientPage = () => {
           Давайте выберем подходящую услугу!
         </h1>
 
-        <button className="mt-10 w-[220px] h-[56px] rounded-[50px] bg-[#F8721F] text-white font-sans font-normal text-[16px] hover:bg-[#f59a62] transition-colors duration-150">
-          Записаться на прием
-        </button>
+        <button
+        onClick={() => navigate("/appointment")}
+        className="mt-10 w-[220px] h-[56px] rounded-[50px] bg-[#F8721F] text-white font-sans font-normal text-[16px] hover:bg-[#f59a62] transition-colors duration-150"
+      >
+        Записаться на прием
+      </button>
       </main>
 
       <Footer />
