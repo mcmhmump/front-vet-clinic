@@ -34,6 +34,7 @@ import { AuthPage } from "./pages/AuthPage";
 import { PatientPage } from "./pages/PatientPage";
 import { DoctorPage } from "./pages/DoctorPage";
 import { RegisterPage } from "./pages/RegisterPage";
+import { AppointmentPage } from "./pages/AppointmentPage";
 import "./App.css";
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
         <Route path="/patient" element={<PatientPage />} />
         <Route path="/doctor" element={<DoctorPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/appointment" element={<AppointmentPage />} />
       </Routes>
     </BrowserRouter>
   );
