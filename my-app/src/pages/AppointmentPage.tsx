@@ -3,7 +3,22 @@ import women from "../assets/images/women.png";
 import wave from "../assets/images/shape.png";
 import sym from "../assets/icons/appointment icon 1 2.png"
 import ukol from "../assets/icons/ukol.png"
+import { useNavigate } from "react-router-dom";
 export const AppointmentPage = () => {
+    const navigate = useNavigate();
+    const handleAppointmentSubmit = () => {
+        navigate("/patient", {
+            state: {
+                appointment: {
+                    service: "Осмотр пациента",
+                    petName: "Боня",
+                    petType: "хомяк",
+                    date: "28.04.26",
+                    time: "13:00",
+                },
+            },
+        });
+    };
   return (
     <section className="relative px-12 py-6 pb-30">
         <img src={logo} alt="лого" className="h-[80px]" />
@@ -66,85 +81,16 @@ export const AppointmentPage = () => {
                     </select>
             </div>
             <div className="flex justify-center mt-10">
-                <button className="w-[320px] h-[58px] rounded-[50px] bg-[#F8721F] text-white text-[18px] font-sans font-medium hover:bg-[#f59a62] transition-colors duration-150">Записаться</button>
+                <button
+                onClick={handleAppointmentSubmit}
+                className="w-[320px] h-[58px] rounded-[50px] bg-[#F8721F] text-white text-[18px] font-sans font-medium hover:bg-[#f59a62] transition-colors duration-150"
+                >
+                Записаться
+                </button>
             </div>
 
         </div>
-        {/* <div className="mt-10 flex items-end justify-between gap-10">
-           
-
-           
-            <div className="w-[58%] bg-[#F0ECE7] rounded-[28px] px-10 py-10">
-            <div className="grid grid-cols-3 gap-5">
-                    <div className="h-[110px] rounded-[18px] bg-white flex flex-col items-center justify-center text-center">
-                    <p className="text-[32px]">✂️</p>
-                    <p className="text-[28px] font-sans font-semibold text-[#02000F]">
-                        Стрижка
-                    </p>
-                    </div>
-
-                    <div className="h-[110px] rounded-[18px] bg-white flex flex-col items-center justify-center text-center">
-                    <p className="text-[32px]">📋</p>
-                    <p className="text-[28px] font-sans font-semibold text-[#02000F]">
-                        Осмотр
-                    </p>
-                    </div>
-
-                    <div className="h-[110px] rounded-[18px] bg-white flex flex-col items-center justify-center text-center">
-                    <p className="text-[32px]">💉</p>
-                    <p className="text-[28px] font-sans font-semibold text-[#02000F]">
-                        Вакцинация
-                    </p>
-                    </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-5 mt-8">
-                    <input
-                    type="text"
-                    placeholder="ФИО"
-                    className="h-[62px] rounded-[16px] bg-white px-6 text-[18px] outline-none border border-[#E7E2DC]"
-                    />
-
-                    <input
-                    type="text"
-                    placeholder="Номер телефона"
-                    className="h-[62px] rounded-[16px] bg-white px-6 text-[18px] outline-none border border-[#E7E2DC]"
-                    />
-
-                    <input
-                    type="text"
-                    placeholder="Имя питомца"
-                    className="h-[62px] rounded-[16px] bg-white px-6 text-[18px] outline-none border border-[#E7E2DC]"
-                    />
-
-                    <select className="h-[62px] rounded-[16px] bg-white px-6 text-[18px] outline-none border border-[#E7E2DC] text-[#7A7A7A]">
-                    <option>Выберите услугу</option>
-                    <option>Стрижка</option>
-                    <option>Осмотр</option>
-                    <option>Вакцинация</option>
-                    </select>
-
-                    <input
-                    type="text"
-                    placeholder="месяц/день/год"
-                    className="h-[62px] rounded-[16px] bg-white px-6 text-[18px] outline-none border border-[#E7E2DC]"
-                    />
-
-                    <select className="h-[62px] rounded-[16px] bg-white px-6 text-[18px] outline-none border border-[#E7E2DC] text-[#7A7A7A]">
-                    <option>Выберите время</option>
-                    <option>10:00</option>
-                    <option>11:00</option>
-                    <option>12:00</option>
-                    </select>
-            </div>
-
-            <div className="flex justify-center mt-10">
-                    <button className="w-[320px] h-[58px] rounded-[50px] bg-[#F8721F] text-white text-[18px] font-sans font-medium hover:bg-[#f59a62] transition-colors duration-150">
-                    Записаться
-                    </button>
-            </div>
-            </div>
-        </div> */}
+        
     </section>
   );
 };
