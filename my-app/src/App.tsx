@@ -33,6 +33,7 @@ import { HomePage } from "./pages/HomePage";
 import { AuthPage } from "./pages/AuthPage";
 import { PatientPage } from "./pages/PatientPage";
 import { DoctorPage } from "./pages/DoctorPage";
+import { RegisterPage } from "./pages/RegisterPage";
 import "./App.css";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/patient" element={<PatientPage />} />
         <Route path="/doctor" element={<DoctorPage />} />
+        <Route path="/register" element={<RegisterPage />} />
       </Routes>
     </BrowserRouter>
   );

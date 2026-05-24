@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/icons/logoWindow.png";
 import food from "../assets/images/foodDog.png";
@@ -107,12 +108,7 @@ export const AuthPage = () => {
             Войти
           </button>
 
-          <button
-            type="button"
-            className="w-[320px] h-[56px] rounded-[50px] bg-[#F8721F] text-white text-[18px] font-semibold hover:bg-[#f59a62] transition-colors duration-150"
-          >
-            Зарегистрироваться
-          </button>
+          <Link to="/register" className="w-[320px] h-[56px] rounded-[50px] bg-[#F8721F] text-white text-[18px] font-semibold hover:bg-[#f59a62] transition-colors duration-150 inline-flex items-center justify-center">Зарегистрироваться</Link>
         </div>
       </div>
     </section>
