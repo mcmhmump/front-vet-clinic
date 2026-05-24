@@ -31,6 +31,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
 import { AuthPage } from "./pages/AuthPage";
+import { PatientPage } from "./pages/PatientPage";
+import { DoctorPage } from "./pages/DoctorPage";
 import "./App.css";
 
 function App() {
@@ -39,6 +41,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/auth" element={<AuthPage />} />
+        <Route path="/patient" element={<PatientPage />} />
+        <Route path="/doctor" element={<DoctorPage />} />
       </Routes>
     </BrowserRouter>
   );
