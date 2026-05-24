@@ -1,4 +1,5 @@
 import { Header } from './Header';
+import { Link } from "react-router-dom";
 import background from '../assets/images/background.png'
 import bant from '../assets/images/bant.png'
 import line from '../assets/images/line.png'
@@ -23,7 +24,7 @@ export const Banner = () =>{
                     <div className='flex items-start px-5 gap-5 mt-4 ml-25'>
                         
                         <a href="#" className='bg-[#F8721F] text-[#FFFFFF] text-[16px] w-[146px] h-[56px] rounded-[50px] text-center p-3.5 hover:bg-[#f2a982] transition-colors duration-150'>Подробнее</a>
-                        <a href="#" className='bg-[#02000F] text-[#FFFFFF] text-[16px] w-[235px] h-[56px] rounded-[50px] text-center p-3.5 hover:bg-[#5f5d5c] transition-colors duration-150'>Зарегестрироваться</a>
+                        <Link to="/auth" className="bg-[#02000F] text-[#FFFFFF] text-[16px] w-[235px] h-[56px] rounded-[50px] text-center p-3.5 hover:bg-[#5f5d5c] transition-colors duration-150 inline-flex items-center justify-center">Зарегистрироваться</Link>
                     </div>
                 </div>
             </div>
