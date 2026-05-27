@@ -9,21 +9,10 @@ export const PatientHeader = () => {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-10">
           {/* Лого */}
-          <img
-            src={logo}
-            alt="ВетСфера"
-            className="h-[80px] object-contain"
-          />
-
+          <img src={logo} alt="ВетСфера"className="h-[80px] object-contain"/>
           {/* Навигация */}
           <nav className="flex items-center gap-8">
-            <Link
-              to="/"
-              className="text-[26px] text-[#02000F] font-sans font-medium hover:text-[#F8721F] transition-colors duration-150"
-            >
-              Главная
-            </Link>
-
+            <Link to="/" className="text-[26px] text-[#02000F] font-sans font-medium hover:text-[#F8721F] transition-colors duration-150">Главная</Link>
           </nav>
         </div>
 

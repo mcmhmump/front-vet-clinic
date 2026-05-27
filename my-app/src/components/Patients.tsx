@@ -7,7 +7,7 @@ import friends from "../assets/images/friends.png"
 import rabbit from "../assets/images/rabbit.png"
 export const Patients = () => {
     return(
-        <section className="relative mt-8 pb-50">
+        <section id="patients" className="relative mt-8 pb-50">
             <img src={sled} alt="след" className="absolute right-[28%] top-[5%]"/>
             <img src={sled} alt="след" className="absolute left-[28%] top-[5%] -scale-x-100"/> 
             <div className="flex flex-col items-center gap-5">

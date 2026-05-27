@@ -4,7 +4,7 @@ import ludmila from "../assets/images/Ludmila.png"
 import kristina from "../assets/images/kristina.png"
 export const Comand = () => {
     return(
-        <section className="relative w-full py-20 overflow-hidden">
+        <section id="team" className="relative w-full py-20 overflow-hidden">
             {/* Свечение */}
             <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[80%] h-[500px] bg-[#F8721F] opacity-30 blur-[100px] rounded-[100%] "></div>
             <div className="relative z-10 flex flex-col items-center gap-5">

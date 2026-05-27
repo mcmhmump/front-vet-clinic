@@ -7,7 +7,7 @@ import wave from "../assets/images/shape.png"
 import food from "../assets/images/food.png"
 export const Services = () => {
     return(
-        <section className="relative bg-[#F6F2ED] pb-30">
+        <section id="services" className="relative bg-[#F6F2ED] pb-30">
             <img src={sled} alt="след" className="absolute mt-25 ml-90"/>
             <img src={wave} alt="волна" className="absolute right-[0%]"/>
             <img src={food} alt="корм" className="absolute right-[45%] top-[10%]"/>

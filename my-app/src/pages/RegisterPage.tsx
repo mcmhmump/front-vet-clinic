@@ -23,7 +23,6 @@ export const RegisterPage = () => {
 
     const handleCodeChange = (value: string, index: number) => {
         if (!/^\d?$/.test(value)) return;
-
         const newCode = [...code];
         newCode[index] = value;
         setCode(newCode);
@@ -38,25 +37,9 @@ export const RegisterPage = () => {
     return (
         <section className="relative min-h-screen overflow-hidden bg-[#F5F5F5]">
         <img src={logo} alt="лого" className="absolute h-[97px] m-3 z-20" />
-
-        <img
-            src={food}
-            alt="корм"
-            className="absolute h-[147px] mt-[18%] ml-[10%] z-0 opacity-40"
-        />
-
-        <img
-            src={wave}
-            alt="волна"
-            className="absolute h-[193px] right-[0%] top-[0%] z-0"
-        />
-
-        <img
-            src={dog}
-            alt="собака"
-            className="absolute h-[638px] right-[0%] mt-[5%] z-0"
-        />
-
+        <img src={food} alt="корм" className="absolute h-[147px] mt-[18%] ml-[10%] z-0 opacity-40"/>
+        <img src={wave} alt="волна" className="absolute h-[193px] right-[0%] top-[0%] z-0"/>
+        <img src={dog} alt="собака"className="absolute h-[638px] right-[0%] mt-[5%] z-0"/>
         <div className="relative z-10 flex flex-col items-center pt-20">
             <div className="border-[#F8721F] w-[260px] h-[65px] rounded-[50px] border-[2px] flex items-center justify-center">
             <p className="text-[24px] text-[#F8721F] font-sans font-bold">
@@ -64,9 +47,7 @@ export const RegisterPage = () => {
             </p>
             </div>
 
-            <h1 className="mt-6 text-[56px] text-[#02000F] font-sans font-semibold">
-            Добро пожаловать!
-            </h1>
+            <h1 className="mt-6 text-[56px] text-[#02000F] font-sans font-semibold">Добро пожаловать!</h1>
 
             {step === "register" ? (
             <>
