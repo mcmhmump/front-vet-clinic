@@ -1,17 +1,22 @@
 import { Link } from "react-router-dom";
+import { useAppSelector } from "../app/hooks";
 import logo from "../assets/icons/logoWindow.png";
 import call from "../assets/icons/call orange.png";
 import profile from "../assets/icons/profile.png";
+
 export const DoctorHeader = () => {
+  const registeredUser = useAppSelector((state) => state.auth.registeredUser);
+
+  const shortName = registeredUser
+    ? `${registeredUser.lastName} ${registeredUser.firstName.charAt(0)}.${registeredUser.middleName.charAt(0)}.`
+    : "Пользователь";
+
   return (
     <header className="px-6 pt-6">
-      {/* Верхняя строка */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-10">
-          {/* Лого */}
-          <img src={logo} alt="ВетСфера" className="h-[80px] object-contain"/>
+          <img src={logo} alt="ВетСфера" className="h-[80px] object-contain" />
 
-          {/* Навигация */}
           <nav className="flex items-center gap-8">
             <Link
               to="/"
@@ -19,11 +24,9 @@ export const DoctorHeader = () => {
             >
               Главная
             </Link>
-
           </nav>
         </div>
 
-        {/* Правая часть */}
         <div className="flex items-center gap-4">
           <div className="w-[280px] h-[52px] bg-white rounded-[12px] border border-[#E6E6E6] flex items-center px-4">
             <input
@@ -34,18 +37,17 @@ export const DoctorHeader = () => {
           </div>
 
           <div className="h-[52px] px-5 bg-white rounded-[12px] border border-[#E6E6E6] flex items-center gap-3">
-            <img src={profile} alt="профиль" className="w-[32px] h-[29px]"/>
+            <img src={profile} alt="профиль" className="w-[32px] h-[29px]" />
             <p className="text-[17px] text-[#02000F] font-sans font-medium">
-              Иванова М.С
+              {shortName}
             </p>
           </div>
         </div>
       </div>
 
-      {/* Нижняя левая часть */}
       <div className="mt-6 flex flex-col items-start gap-5">
         <div className="flex items-start gap-3">
-          <img src={call} alt="телефон" className="w-[48px] h-[48px]"/>
+          <img src={call} alt="телефон" className="w-[48px] h-[48px]" />
           <div>
             <p className="text-[34px] leading-none text-[#F8721F] font-sans font-semibold">
               Телефон
